@@ -38,6 +38,7 @@ public class GroupingBy<T, K> implements Collector<T, Map<K, List<T>>, Map<K, Li
     public BinaryOperator<Map<K, List<T>>> combiner() {
         return (left, right) -> {
             right.forEach((key, value) -> {
+                // merge : map 1.8 method
                 left.merge(key, value, (leftValue, rightValue) -> {
                     leftValue.addAll(rightValue);
                     return leftValue;
