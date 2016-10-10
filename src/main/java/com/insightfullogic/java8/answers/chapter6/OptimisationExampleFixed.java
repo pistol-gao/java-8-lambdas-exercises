@@ -2,7 +2,10 @@ package com.insightfullogic.java8.answers.chapter6;
 
 import org.openjdk.jmh.Main;
 import org.openjdk.jmh.annotations.*;
+import org.openjdk.jmh.runner.Runner;
 import org.openjdk.jmh.runner.RunnerException;
+import org.openjdk.jmh.runner.options.Options;
+import org.openjdk.jmh.runner.options.OptionsBuilder;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,6 +28,15 @@ public class OptimisationExampleFixed {
                 "1"
         };
         Main.main(args);
+        /*Options opt = new OptionsBuilder()
+                .include(".*" + OptimisationExampleFixed.class.getSimpleName() + ".*")
+                .warmupIterations(10)
+                .measurementIterations(1)
+                .forks(1)
+                .build();
+
+        new Runner(opt).run();*/
+
     }
 
     private List<Integer> arrayListOfNumbers;

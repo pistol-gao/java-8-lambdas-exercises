@@ -30,6 +30,9 @@
                         <version>2.17</version>
                     </dependency>
                 </dependencies>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
             <plugin>
               <artifactId>maven-assembly-plugin</artifactId>
@@ -85,6 +88,13 @@
             <artifactId>powermock-mockito-release-full</artifactId>
             <version>1.5.3</version>
             <scope>test</scope>
+        </dependency>
+        <!-- work with intellij  -->
+        <dependency>
+            <groupId>org.openjdk.jmh</groupId>
+            <artifactId>jmh-generator-annprocess</artifactId>
+            <scope>compile</scope>
+            <version>LATEST</version>
         </dependency>
     </dependencies>
 
